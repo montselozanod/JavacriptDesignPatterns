@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Cat Clicker</title>
+  <script>
+    function clicker()
+    {
+      var qty = document.getElementById('clicks').value;
+      var new_qty = parseInt(qty,10) + 1;
+      document.getElementById("clicks").value = new_qty;
+
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <div onclick="clicker()">
+      <img src="http://img3.wikia.nocookie.net/__cb20110814202448/tomandjerry/images/9/9f/Tom_2.png" alt="Tom" height="200" width="300">
+    </div>
+    <label>Cat Clicks</label>
+    <input id="clicks" value="0">
+  </p>
+  </div>
+</body>
+</html>
