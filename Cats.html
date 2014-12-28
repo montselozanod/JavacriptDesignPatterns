@@ -1,0 +1,31 @@
+<html>
+<head>
+
+</head>
+<body>
+<script type="text/javascript">
+var body = document.body;
+var cats = [0,1,2,3,4];
+var names = ["Kaiser", "Mary", "Stevie", "Kitty", "Sam"];
+
+for(var i = 0; i < cats.length; i++)
+  {
+    var num = i;
+    var divElement = document.createElement('div');
+    divElement.textContent=names[num];
+    divElement.addEventListener('click', (function(numCopy){
+      return function()
+      {
+        var display = document.createElement("img");
+        display.setAttribute('src', 'http://img3.wikia.nocookie.net/__cb20110814202448/tomandjerry/images/9/9f/Tom_2.png');
+        display.setAttribute('height', '50px');
+        display.setAttribute('height', '25px');
+        body.appendChild(display);
+      }
+    })(num));
+
+    body.appendChild(divElement);
+  }
+  </script>
+</body>
+</html>

@@ -2,23 +2,49 @@
 <head>
   <title>Cat Clicker</title>
   <script>
-    function clicker()
-    {
-      var qty = document.getElementById('clicks').value;
-      var new_qty = parseInt(qty,10) + 1;
-      document.getElementById("clicks").value = new_qty;
 
-    }
+  function clicker(op)
+  {
+      if(op === 0)
+      var qty = document.getElementById('clicks').value;
+      else
+      var qty = document.getElementById('clicks2').value;
+
+      var new_qty = parseInt(qty,10) + 1;
+
+      if(op === 0)
+      document.getElementById("clicks").value = new_qty;
+      else
+      document.getElementById("clicks2").value = new_qty;
+
+
+  }
   </script>
 </head>
 <body>
   <div>
-    <div onclick="clicker()">
+    <div id="name1"><div>
+    <script>
+    var catName1 = "Mary";
+    document.getElementById("name1").innerHTML = catName1;
+    </script>
+    <div onclick="clicker(0)">
       <img src="http://img3.wikia.nocookie.net/__cb20110814202448/tomandjerry/images/9/9f/Tom_2.png" alt="Tom" height="200" width="300">
     </div>
     <label>Cat Clicks</label>
     <input id="clicks" value="0">
-  </p>
   </div>
+  <div>
+    <div id="name2"><div>
+    <script>
+    var catName2 = "Stevie";
+    document.getElementById("name2").innerHTML = catName2;
+    </script>
+      <div onclick="clicker(1)">
+        <img src="http://img3.wikia.nocookie.net/__cb20110814202448/tomandjerry/images/9/9f/Tom_2.png" alt="Tom" height="200" width="300">
+      </div>
+      <label>Cat Clicks</label>
+      <input id="clicks2" value="0">
+    </div>
 </body>
 </html>
